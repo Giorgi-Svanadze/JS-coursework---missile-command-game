@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Missile Command Game</title>
+</head>
+<body onload="menu()">
+  <div id="startScreen">
+    <h1>Missile Command</h1>
+    <button onclick="startGame()">Play Game</button>
+    <button onclick="showHighScores()">High Scores</button>
+  </div>
+  <div id="gameOverScreen" style="display: none;">
+    <h1>Game Over!</h1>
+    <p id="finalScore">Score: 0</p>
+    <p id="alert">Only letters and numbers are allowed to input</p>
+    <form id="highScoreForm">
+      <input type="text" id="playerName" name="playerName" pattern="[a-zA-Z0-9]+" placeholder="Enter your name:" title="Only letters and numbers are allowed" required>
+      <button type="button" id="saveScore" onclick="saveHighScore()">Save High Score</button>
+    </form>
+    <button onclick="playAgain()">Play Again</button>
+    <button onclick="goBack()">Main Menu</button>
+  </div>
+  <div id="highScoresScreen" style="display: none;">
+    <h1 id="best">High Scores</h1>
+    <table id="highScoresTable">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="highScoresBody"></tbody>
+    </table>
+    <button onclick="goBackScores()">Go Back</button>
+  </div>
+
+  <canvas id="gameCanvas" width="1600" height="832"></canvas>
+  <script src="test.js"></script>
+</body>
+</html>

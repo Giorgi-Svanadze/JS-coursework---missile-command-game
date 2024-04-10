@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'pixel-s';
+  src: url('resources/fonts/PixelSmall.ttf') format('woff');
+}
+@font-face {
+  font-family: 'pixel-m';
+  src: url('resources/fonts/PixelMiddle.ttf') format('woff');
+}
+@font-face {
+  font-family: 'pixel-l';
+  src: url('resources/fonts/PixelHigh.ttf') format('woff');
+}
+canvas {
+    border: 2px ridge #000;
+    display: block;
+}
+body {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  width: 1600px;
+  height: 836px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  cursor: url('resources/aim.svg'), auto;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+h1{
+  margin-bottom: 0px;
+}
+p{
+  margin: 40px;
+}
+#startScreen, #gameOverScreen, #highScoresScreen {
+  font-family: "pixel-l";
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  color: #00dc01;
+}
+#score {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 5px solid #00dc01;
+  font-family: "pixel-m";
+  font-size: 60px;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  padding: 20px;
+  color: #00dc01;
+}
+button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 5px solid #00dc01;
+  width: 400px;
+  height: 90px;
+  font-family: 'pixel-s';
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 60px;
+  color: #00dc01;
+}
+button:hover {
+  border: 5px dashed #00dc01;
+  cursor: url('resources/aim.svg'), auto;
+
+}
+button:disabled, #playerName:disabled {
+  border: 5px dashed #008500;
+  color: #008500;
+}
+#highScoreForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#playerName {
+  margin: 10px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 5px solid #00dc01;
+  width: 400px;
+  height: 90px;
+  font-family: 'pixel-s';
+  font-size: 60px;
+  color: #00dc01;
+}
+#playerName::placeholder {
+  color: #00dc01;
+}
+#playerName:disabled::placeholder {
+  color: #008500;
+}
+#saveScore {
+  margin: 0px;
+}
+#alert {
+  font-family: 'pixel-m';
+  font-size: 40px;
+  margin: 0;
+  color: #9e0000;
+}
+#highScoresTable {
+  font-family: 'pixel-m';
+  font-size: 50px;
+  margin: 0 auto;
+}
+#best {
+  font-family: 'pixel-l';
+  font-size: 60px;
+}
